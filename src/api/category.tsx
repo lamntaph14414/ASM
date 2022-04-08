@@ -1,5 +1,3 @@
-import { CategoryType } from "../pages/types/category";
-import { isAuthenticate } from "../utils/localstorage";
 import instance from "./instance";
 
 export const list = ()=>{
@@ -9,4 +7,20 @@ export const list = ()=>{
 export const remove = (id:number) =>{
     const url =`/category/${id}`
     return instance.delete(url)
+}
+export const read = (id) => {
+    const url = `/category/${id}`;
+    return instance.get(url);
+}
+export const create = (category) =>{
+    const url =`/category/${category._id}`
+    return instance.post(url,category);
+}
+export const update = (category) => {
+    const url = `/category/${category._id}`;
+    return instance.put(url, category);
+}
+export const get = (id:number) =>{
+    const url = `/category/${id}`
+    return instance.get(url);
 }

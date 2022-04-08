@@ -15,7 +15,7 @@ const ProductManager = ({ products, onRemove }: ProductManagerProps) => {
     {
       title: 'Action',
       key: 'action',
-      render: (record) => (
+      render: () => (
         <Space size="middle">
             <a href="">Edit</a>
             <a href="">Delete</a>
