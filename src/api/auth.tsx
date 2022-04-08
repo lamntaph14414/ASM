@@ -1,14 +1,10 @@
 import instance from './instance';
 
-type User = {
-    email: string,
-    password: string
+export const Register = (dataUser) => {
+    const url = `register`;
+    return instance.post(url, dataUser);
 }
-export const signup = (user: User) => {
-    const url = `/signup`;
-    return instance.post(url, user);
-}
-export const signin = (user: User) => {
-    const url = `/signin`;
-    return instance.post(url, user);
+export const signin = (dataUser) => {
+    const url = `login`;
+    return instance.post(url, dataUser);
 }
