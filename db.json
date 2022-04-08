@@ -1,0 +1,14 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "Product a",
+        "price": "12332131"
+      },
+      {
+        "id":"2",
+        "name": "product b",
+        "price": "12332131"
+      }
+    ]
+  }
