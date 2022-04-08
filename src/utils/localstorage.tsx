@@ -1,13 +1,12 @@
-export const Authenticate = (user: {}, next:()=> void) => {
- try {
-     localStorage.setItem('user', JSON.stringify(user) as string);
-     next();
- } catch (error) {
-     console.log(error);
-     
- }
-}
-export const isAuthenticate = () =>{
-    if(!localStorage.getItem('user')) return;
+export const isAuthenticate = () => {
+    if(!localStorage.getItem('user')) {
+        const fakeLocal = {
+            token: "fakeToken",
+            user:{
+                _id: "fakeUser"
+            }
+        }
+        return fakeLocal
+    }
     return JSON.parse(localStorage.getItem('user') as string);
 }
