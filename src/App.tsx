@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import '../src/App.css'
+import '../App.css'
 import '../src/index.css'
 import {Navigate, Route, Routes } from 'react-router-dom'
 import WebsiteLayout from './pages/layouts/WebsiteLayout'
