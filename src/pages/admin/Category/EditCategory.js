@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer';
 import React, { useEffect } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -12,6 +13,15 @@ const EditProduct = () =>{
     useEffect(()=>{
 
     },[])
+    // update
+    const onSubmit = async(data)=>{
+        const slugCate = slugify(data.name)
+        const dataCate = {
+            _id: id,
+            name: data.name,
+            slug: slugCate
+        }
+    }
     return (
         <div className="container px-6 mx-auto grid">
             <h2 className="my-6 text-2xl font-semibold text-gray-700 :text-gray-200">
