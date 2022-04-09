@@ -1,7 +1,12 @@
+import { data } from 'autoprefixer'
 import React,{useState} from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-const Search = () => {
+const SearchForm = () => {
+    const [openSearch, setSearch] = useState(false)
+    let {value: resultSearch} = useSelector(data => data.productSearch);
+    const { register, handleSubmit, formState: {errors}} = useForm();
   return (
     <>
         <div className='relative'>
@@ -38,4 +43,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default SearchForm

@@ -14,10 +14,6 @@ const Menu = () => {
                         className="menu-item-link content-none pb-2 pt-2 trans-second ">Shop</NavLink>
                 </li>
                 <li className="inline-block pr-[30px] duration-300 ">
-                    <NavLink to="/news"
-                        className="menu-item-link content-none pb-2 pt-2 trans-second ">News</NavLink>
-                </li>
-                <li className="inline-block pr-[30px] duration-300 ">
                     <NavLink to="/about"
                         className="menu-item-link content-none pb-2 pt-2 trans-second ">About</NavLink>
                 </li>

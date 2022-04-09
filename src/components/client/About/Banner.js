@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 const Banner = () => {
   return ( 
     <div className="max-w-full slideShow overflow-hidden">

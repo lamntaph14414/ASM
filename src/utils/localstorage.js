@@ -8,5 +8,5 @@ export const isAuthenticate = () => {
         }
         return fakeLocal
     }
-    return JSON.parse(localStorage.getItem('user') as string);
+    return JSON.parse(localStorage.getItem('user'));
 }

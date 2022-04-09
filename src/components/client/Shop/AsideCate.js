@@ -1,8 +1,13 @@
+import { data } from 'autoprefixer'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import {Link, NavLink } from 'react-router-dom'
 
 
 const AsideCate = () => {
+    const categories = userSelector((data => data.category.value))
+    useEffect(() => {
+        
+    }, []);
   return (
     <aside className="rounded-lg bg-white py-5 px-3 sticky top-[10px]">
         <div className="shop__category-group">
@@ -19,15 +24,18 @@ const AsideCate = () => {
         <div className="shop__category-group">
             <span className="ff-2">Category</span>
             <ul className="category-item__list p-0">
-                <li className='category-item__item list-none my-1 mx-0'>
-                    <NavLink  className="cate-link inline-block w-full py-[6px] px-[5px] rounded-[5px] trans-second hover:bg-primary-15-color hover:text-primary-color"></NavLink>
-                </li>
+                {categories?.map((item, index) =>{
+                    return <li key={index} className='category-item__item list-none my-1 mx-0'>
+                                <NavLink to={`/categories/${item._id}`} className="cate-link inline-block w-full py-[6px] px-[5px] rounded-[5px] trans-second hover:bg-primary-15-color hover:text-primary-color">{item.name}</NavLink>
+                            </li>
+                })}
+                
             </ul>
         </div>
         <div className='shop_category-group'>
             <span className="ff-2">Filter</span>
             <div className="my-2">
-                nput className="filter-range w-full block" type="range" min="0" max="1000" />
+                <input className="filter-range w-full block" type="range" min="0" max="1000" />
             </div>
         </div>
     </aside>

@@ -1,7 +1,6 @@
 import React from 'react'
 
-
-const Search = () => {
+const SearchForm = () => {
   return (
     <div className="flex justify-center flex-1 lg:mr-32">
         <div className="relative w-full max-w-xl mr-6 focus-within:text-purple-500">
@@ -20,4 +19,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default SearchForm
