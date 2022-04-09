@@ -22,12 +22,12 @@ const Category = () => {
         dispatch(addCategory(dataCate));
     }
 
-    //-------------list
+    //----list
     useEffect(() => {
         dispatch(listCategory());
     }, [])
 
-    //--------------delete category
+    //---delete category
     const onDelete = async (id) => {
         const confirm = window.confirm("Are you sure delete this category?");
         if (confirm) {
